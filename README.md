@@ -27,6 +27,29 @@ Once the practitioner is done filling in the form, the actual request can be dra
 functionality, in other words: the browser does not depend on an external server to generate the form. This ensures that
 the confidential information never leaves the client computer.
 
+####Adding instruments
+
+In order to add new instruments, two important files are needed, the **.form** and the **.label** files. The combination
+of these two files describes the form, structure and content. I will take the example of the EAW.
+
+**EAW.form**
+
+This file describes what are the entry fields of the form (text fields, date fields, nummeric fields, drop down fields, etc.), these fields are given a unique name which is referred to in the label-file. In this file also the order of fields is
+determined and whether or not they represent mandatory information. Also tabs can be defined, enabling us the spread the
+fields over substantially connected fields. 
+
+Also dependency information is added in this file, for example some fields should only be available based on the selection 
+of other fields. Other information in this file include the need for translations (does the content of the field need to 
+be translated for the actual request?), should it be included in the final request.
+
+Also the layout of the coverpage is described in this file. The result is a rather complicated .json file, that gives
+great flexibility in the laying out of the form, at the expense of high complexity.
+
+**EAW.label**
+
+Most fields that are included in the **EAW.form** file have been given names that are referred to from the **EAW.label** file. For each named field it is possible to add the associated labels in the EU languages. 
+
+
 ####Files
 
 A short description of the files used in this project. Being a prototype, not everything is fully worked out.
@@ -39,7 +62,7 @@ A short description of the files used in this project. Being a prototype, not ev
 **legal-scripts.js** : Javascript file adding the functionality to the Prototype (loading/saving data and forms, etc.)  
 **.htaccess**  : only used to avoid browsers caching files containing the form-details. This ensures that any changes to 
 these files are immediately visible.  
-
+**.label**, **.form** : files describing the form (see above)
 
 
 
