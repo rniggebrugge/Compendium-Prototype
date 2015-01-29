@@ -1,0 +1,54 @@
+{
+  "language":"english",
+  "version":"0.0.2",
+  "instrument":"CO",
+  "author":"Remco",
+  "route":
+  	[
+		{ "type":"tab","label":"(a) Issuing and executing States"},
+		{ "type":"country","label":"Issuing State","name":"issuing_state"},
+		{ "type":"country","label":"Executing State","name":"executing_state"},
+		
+		{ "type":"tab","label":"(b) Court which issued the confiscation order:"},
+		{ "type":"text","label":"Official name","name":"official_name"},
+		{ "type":"text","label":"Address","name":"court_address","break":1,"rows":4},
+		{ "type":"text","label":"File reference","name":"file_reference"},
+		{ "type":"text","label":"Tel.No.: (country code)(area/city code)","name":"court_phone"},
+		{ "type":"text","label":"Fax No.: (country code)(area/city code)","name":"court_fax"},
+		{ "type":"text","label":"E-mail","name":"court_email"},
+		{ "type":"text","label":"Languages in which it is possible to communicate with the Court:","name":"court_languages","break":1,"rows":2},
+		{ "type":"text","label":"Contact details for person(s) to contact in order to obtain additional information for the purpose of the execution of the confiscation order, or, where applicable, for the purpose of coordination of the execution of a confiscation order transmitted to two or more executing States, or for the purpose of the transfer to the issuing State of monies or properties obtained from the execution (name, title/grade, tel. no., fax no., and, when available, e‑mail):","name":"court_contacts", "break":1,"rows":7},
+
+		{ "type":"tab","label":"(c) Authority competent for the execution of the confiscation order in the issuing State"},
+		{ "type":"info","label":"Applicable only if the authority is different from the Court under point (b)"},
+		{ "type":"text","label":"Official name","name":"exec_official_name"},
+		{ "type":"text","label":"Address","name":"exec_court_address","break":1,"rows":4},
+		{ "type":"text","label":"Tel.No.: (country code)(area/city code)","name":"exec_court_phone"},
+		{ "type":"text","label":"Fax No.: (country code)(area/city code)","name":"exec_court_fax"},
+		{ "type":"text","label":"E-mail","name":"exec_court_email"},
+		{ "type":"text","label":"Languages in which it is possible to communicate with the Court:","name":"exec_court_languages","break":1,"rows":2},
+		{ "type":"text","label":"Contact details for person(s) to contact in order to obtain additional information for the purpose of the execution of the confiscation order, or, where applicable, for the purpose of coordination of the execution of a confiscation order transmitted to two or more executing States, or for the purpose of the transfer to the issuing State of monies or properties obtained from the execution (name, title/grade, tel. no., fax no., and, when available, e‑mail):","name":"exec_court_contacts", "break":1,"rows":7},
+		
+		{ "type":"tab","label":"(d) Where a central authority has been made responsible for the administrative transmission and reception of confiscation orders in the issuing State:"},
+		{ "type":"text","label":"Name of the Central Authority","name":"central_authority_name"},
+		{ "type":"text","label":"Contact person, if applicable (title/grade and name):","name":"central_contact","break":1,"rows":5},
+		{ "type":"text","label":"Address:","name":"central_address","break":1,"rows":4},
+		{ "type":"text","label":"File reference","name":"central_file_reference"},
+		{ "type":"text","label":"Tel.No.: (country code)(area/city code)","name":"central_phone"},
+		{ "type":"text","label":"Fax No.: (country code)(area/city code)","name":"central_fax"},
+		{ "type":"text","label":"E-mail","name":"central_email"},
+		
+		{ "type":"tab","label":"(e) Authority or authorities which may be contacted"},
+		{ "type":"choose","style":"checkbox","label":"Authority or authorities which may be contacted (if point (c) and/or (d) has(have) been completed):", "break":2,
+			"name":"contact_for","options":[
+				{ "value":"B","label":"Authority mentioned under point (b)", "route_visible":1,"route_position":"inline","route": [
+					{ "type":"text","label":"Can be contacted for questions concerning:","name":"b_for","break":1,"rows":3}]},
+				{ "value":"C","label":"Authority mentioned under point (c)", "route_visible":1,"route_position":"inline", "route": [
+					{ "type":"text","label":"Can be contacted for questions concerning:","name":"c_for","break":1,"rows":3}]},
+				{ "value":"D","label":"Authority mentioned under point (d)", "route_visible":1,"route_position":"inline", "route": [
+					{ "type":"text","label":"Can be contacted for questions concerning:","name":"d_for","break":1,"rows":3}]}
+				]}
+				
+		
+	]
+}

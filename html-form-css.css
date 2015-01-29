@@ -1,0 +1,23 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {background:#fff; margin:0}
+* { font-family:"Times New Roman", Times, serif; color:#000; }
+
+div.tab-header { font-size:15px; font-weight:bold; margin:0; padding:0 0 5px 20px; clear:left }
+div.tab { margin:0 0 30px 20px; padding:10px 10px 0; border:2px solid #999; border-radius:10px}
+
+p.pagebreak { line-height:12px; padding:10px; margin:4px 10px; overflow:hidden; color:#999; font-size:12px;
+		border:1px solid #999}
+		
+.label { margin:0 0 10px 0; padding:0; font-size:14px; clear:left; line-height:22px }
+.label-narrow { width:240px; float:left; } 
+
+.value{ margin:0 0 10px 30px; padding:0; font-size:14px ; color:#05a; line-height:22px }
+.value-narrow { width:600px; float:left; margin-left:0 !important; clear:right ; } 
+
+
+.spacer { margin:0 0 10px; padding:0; background:#cfa }
+.spacer-narrow { width:700px; float:left; clear:right; } 
+
+.info { margin:0 0 10px 0; padding:0; font-size:14px; line-height:22px }

@@ -1,0 +1,66 @@
+@charset "utf-8";
+/* CSS Document */
+
+* { font-family:Arial; font-size:14px }
+body { margin:0; background:#003}
+#quiz { display:block; width:870px; }
+div.block { margin:0 0 15px 0; padding:0 ; }
+div.route { padding:0 10px 20px ; margin:0 10px 20px 0;}
+div.route div.route { }
+div.tab {  padding:10px; border:2px solid #999; background:#d6d6d6; margin:0 0 30px; 
+	border-radius:10px }
+h2 { color:#fff; font-size:16px; margin:0; padding:10px 0 10px; }
+div.spacer { background:#cfa; margin:12px 0}
+label { cursor:pointer; }
+span.label_short { display:block; float:left; width:240px }
+span.sub_route { display:none; padding:0 0 10px 10px; margin:0 }
+#ui-datepicker-div { background:#ccc; border:2px solid #900; border-radius:8px; display:none}
+#ui-datepicker-div * { font-size:12px; font-family:Arial; }
+#ui-datepicker-div a { text-decoration:none; color:#009; }
+a.ui-datepicker-prev { cursor:pointer; margin:3px 0 0 3px;}
+a.ui-datepicker-next { display:block; float:right; cursor:pointer; margin:3px 3px 0 0; }
+.ui-datepicker-title { text-align:center; }
+.grey, .grey_in { display:block !important; }
+.grey {  background:#ccc}
+.grey_in {  background:#df9}
+.grey * { color:#bbb}
+.number { text-align:right}
+
+#menu { display:block; position:fixed; right:10px; top:31px; background:#fff; border:3px solid #09f; 
+	border-radius:10px;	width:350px;}
+#menu a { display:block; margin:0; padding:4px 10px; font-size:14px; color:#06c; text-decoration:none;}
+#menu a:hover { background:#cf9}
+#menu a.activeLink { background:#ad7 }
+
+#control_panel { display:block; position:fixed; left:10px; top:0px; width:500px; height:115px; background:#003; }
+#control_panel .tab_button { border:0; background:#666; color:#fff; border-radius:6px 6px 0 0; display:block; 
+	float:left;padding:6px 10px; margin:4px 4px 0 0; cursor:pointer; font-size:14px; line-height:14px; 
+	font-weight:bold  }
+#control_panel button.activeBtn { background:#09f; color:#fff; }
+#control_panel div { position:absolute; left:0px; top:30px; background:#3af; margin:0; width:100%;
+	height:70px; border-radius:10px; overflow:hidden; border:3px solid #09f}
+#control_panel div table { border-collapse:collapse; margin:5px 0 0 10px; }
+#control_panel div td { color:#fff; padding:4px 10px;}
+#control_panel div td input, #control_panel div td select { width:200px; }
+#control_panel div td button { border:0; border-radius:5px; background:#339; color:#fff; font-weight:bold;
+	text-align:center; width:120px; font-size:12px; line-height:14px; padding:4px 0; cursor:pointer }
+
+#grey { position:fixed; left:0px; right:0px; top:0px; bottom:0px; background:#999; display:none}
+
+#popup { position:fixed; left:100px; right:100px; top:100px; bottom:100px; background:#fff; border:4px solid #06c;
+	border-radius:15px; display:none; padding:20px}
+#popup textarea { width:100%; font-size:10px; font-family:"Courier New", Courier, monospace; border:1px solid #090;
+	background:#dfc}
+
+div.multiple { display:block; margin:3px 0 ; padding:0px; border:2px solid #696; border-radius:10px; }
+div.multiple div.route { padding:2px ; margin:2px;}
+div.multiple_counter { float:right;
+	padding:10px 10px 0 0; margin:0; font-size:11px; line-height:11px; color:#666; font-style:italic;}
+
+div#status { position:fixed; right:20px; top:4px; color:#fff; font-weight:bold; cursor:pointer;
+	font-family:"Times New Roman", Times, serif; font-size:15px; line-height:15px; }
+div#status img { display:block; float:left; margin:0 5px 0 0; height:15px; }
+
+div#log { background:#46a; color:#fff; position:fixed; bottom:0; right:0; width:100px; height:20px; 
+	overflow:auto; border-radius:10px 0 0 0; }
+div#log p { padding:4px; margin:0; color:#ccc; font-size:12px; line-height:12px; text-align:center}

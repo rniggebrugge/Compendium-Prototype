@@ -1,0 +1,441 @@
+{
+"cover-annex":
+   {
+   "en" : "ANNEX",
+   "nl" : "BIJLAGE",
+   "ro" : "ANEXĂ"
+   },
+"cover-eaw":
+   {
+   "en" : "EUROPEAN ARREST WARRANT ¹",
+   "nl" : "EUROPEES AANHOUDINGSBEVEL ¹",
+   "ro" : "MANDATUL EUROPEAN DE ARESTARE ¹"
+   },
+"cover-note":
+   {
+   "en" : "This warrant must be written in, or translated into, one of the official languages of the executing Member State, when that State is known, or any other language accepted by that State",
+   "nl" : "Dit bevel moet gesteld of vertaald zijn in één van de officiële talen van de uitvoerende staat, indien die staat bekend is, of in een andere taal die door die staat is aanvaard.",
+   "ro" : "Prezentul mandat trebuie sa fie redactat sau tradus într-una din limbile oficiale ale statului membru de executare, în cazul în care acesta este cunoscut, sau în orice alta limba acceptatade acest stat."
+   },
+"cover-main":
+   {
+   "en" : "This warrant has been issued by a competent judicialauthority. I request that the person mentioned below be arrested and surrendered for the purposes of conducting a criminal prosecution or executing a custodial sentence or detention order.",
+   "nl" : "Dit bevel is uitgevaardigd door een bevoegde rechterlijke autoriteit. Ik verzoek om aanhouding en overlevering van de hieronder genoemde persoon met het oog op strafvervolging of tenuitvoerlegging van een vrijheidsstraf of een tot vrijheidsbeneming strekkende maatregel. ",
+   "ro" : "Prezentul mandat a fost emis de o autoritate judiciară competentă. Solicit ca persoana menționată mai jos să fie arestată și predată autorităților judiciare în vederea efectuării urmăririi penale și a executării unei pedepse sau măsuri de siguranță privative de libertate."
+   },
+"tab_a":
+   {
+   "en" : "a) Information regarding the identity of the requested person:",
+   "nl" : "a) Gegevens betreffende de identiteit van de gezochte persoon:",
+   "ro" : "a) Informatii referitoare la identitatea persoanei solicitate:"
+   },
+"name":
+   {
+   "en" : "Name",
+   "nl" : "Naam",
+   "ro" : "Numele"
+   },
+"forenames":
+   {
+   "en" : "Forename(s)",
+   "nl" : "Voornaam of voornamen",
+   "ro" : "Prenumele"
+   },
+"maiden_name":
+   {
+   "en" : "Maiden name, where applicable",
+   "nl" : "Meisjesnaam, in voorkomend geval:",
+   "ro" : "Numele avut înaintea casatoriei (daca este cazul): "
+   },
+"alias":
+   {
+   "en" : "Alias, where applicable",
+   "nl" : "Bijnamen, in voorkomend geval",
+   "ro" : "Alias (daca este cazul)"
+   },
+"sex":
+   {
+   "en" : "Sex",
+   "nl" : "Geslacht",
+   "ro" : "Sexul"
+   },
+"makechoice":
+   {
+   "en" : "..make a choice",
+   "nl" : "..maak een keuze"
+   },
+"male":
+   {
+   "en" : "Male",
+   "nl" : "Man"
+   },
+"female":
+   {
+   "en" : "Female",
+   "nl" : "Vrouw"
+   },
+"unknown":
+   {
+   "en" : "Unknown",
+   "nl" : "Onbekend"
+   },
+"birthday":
+   {
+   "en" : "Date of birth",
+   "nl" : "Geboortedatum",
+   "ro" : "Data nasterii"
+   },
+"birthplace":
+   {
+   "en" : "Place of birth",
+   "nl" : "Geboorteplaats",
+   "ro" : "Locul nasterii"
+   },
+"residence":
+   {
+   "en" : "Residence and/or known address",
+   "nl" : "Verblijfplaats en/of bekend adres",
+   "ro" : "Resedinta si/sau domiciliul cunoscut"
+   },
+"languages":
+   {
+   "en" : "Language(s) which the requested person understands (if known)",
+   "nl" : "Indien bekend: taal/talen die de gezochte persoon begrijpt",
+   "ro" : "Limba/limbile pe care o/le întelege persoana solicitata (daca este/sunt cunoscute)"
+   },
+"marks":
+   {
+   "en" : "Distinctive marks/description of the requested person",
+   "nl" : "Bijzondere kenmerken/beschrijving van de gezochte persoon:",
+   "ro" : "Trasaturi fizice particulare/descrierea persoanei solicitate"
+   },
+"photo":
+   {
+   "en" : "Photo and fingerprints of the requested person, if they are available and can be transmitted, or contact details of the person to be contacted in order to obtain such information or a DNA profile (where this evidence can be supplied but has not been included)",
+   "nl" : "Foto en vingerafdrukken van de gezochte persoon, indien die beschikbaar zijn en mogen worden verzonden, of contactadres van de persoon die gecontacteerd moet worden om die informatie of een DNA-profiel te verkrijgen (indien deze gegevens beschikbaar zijn en toegezonden mogen worden, maar niet zijn opgenomen)",
+   "ro" : " Fotografia si amprentele digitale ale persoanei solicitate, daca sunt disponibile si se pot trimite, sau adresa persoanei care poate fi contactata cu scopul de a le obtine ori pentru a obtine o caracterizare a ADN (daca nu s-a inclus o astfel de informatie si se dispune de ea pentru transmiterea sa)"
+   },
+"tab_b":
+   {
+   "en" : "b) Decision on which the warrant is based",
+   "nl" : "b) Besluit dat aan dit aanhoudingsbevel ten grondslag ligt:",
+   "ro" : "b) Decizia pe care se întemeiaza mandatul"
+   },
+"warrant_decision":
+   {
+   "en" : "1. Arrest warrant or judicial decision having the same effect",
+   "nl" : "1. Aanhoudingsbevel of een gelijkwaardige rechterlijke beslissing:",
+   "ro" : "1. Mandatul de arestare sau decizia judiciara având acelasi efect"
+   },
+"warrant_type":
+   {
+   "en" : "----- Type",
+   "nl" : "----- Soort",
+   "ro" : "----- Tipul"
+   },
+"judgement":
+   {
+   "en" : "2. Enforceable judgement",
+   "nl" : "2. Voor tenuitvoerlegging vatbaar vonnis:",
+   "ro" : "2. Hotarârea judecatoreasca definitiva si executorie"
+   },
+"reference":
+   {
+   "en" : "----- Reference",
+   "nl" : "----- Referentie",
+   "ro" : "----- Referinta"
+   },
+"tab_c":
+   {
+   "en" : "c) Indications on the length of the sentence:",
+   "nl" : "c) Gegevens betreffende de duur van de straf",
+   "ro" : "c) Informatii privind durata pedepsei:"
+   },
+"max_length":
+   {
+   "en" : "1. Maximum length of the custodial sentence or detention order which may be imposed for the offence(s):",
+   "nl" : "1. Maximumduur van de vrijheidsstraf of tot vrijheidsbeneming strekkende maatregel die voor het strafbare feit/de strafbare feiten kan worden opgelegd:",
+   "ro" : "1. Durata maxima a pedepsei sau a masurii de siguranta privative de libertate care se poate aplica pentru infractiune  sau infractiuni:"
+   },
+"length_custodial":
+   {
+   "en" : "2. Length of the custodial sentence or detention order imposed:",
+   "nl" : "2. Duur van de opgelegde vrijheidsstraf of tot vrijheidsbeneming strekkende maatregel:",
+   "ro" : "2. Durata pedepsei sau a masurii de siguranta privative de libertate aplicate:"
+   },
+"remaining":
+   {
+   "en" : "3. Remaining sentence to be served",
+   "nl" : "3. Nog uit te zitten straf",
+   "ro" : "3. Pedeapsa care a ramas de executat: "
+   },
+"tab_d":
+   {
+   "en" : "d) Indicate if the person appeared in person at the trial resulting in the decision",
+   "nl" : "d) Gelieve te vermelden of de betrokkene in persoon is verschenen op het proces dat heeft geleid tot de beslissing",
+   "ro" : "d) Hotarârea pronuntata în lipsa si:"
+   },
+"yes_appeared":
+   {
+   "en" : "1. Yes, the person appeared in person at the trial resulting in the decision",
+   "nl" : "1. Ja, de betrokkene is in persoon verschenen op het proces dat heeft geleid tot de beslissing.",
+   "ro" : "1. persoana în cauza a fost citata personal sau informata prin alte mijloace cu privire la data si locul sedintei în care s-a dat hotarârea în lipsa; "
+   },
+"no_appeared":
+   {
+   "en" : "2. No, the person did not appear in person at the trial resulting in the decision",
+   "nl" : "2. Neen, de betrokkene is niet in persoon verschenen op het proces dat heeft geleid tot de beslissing.",
+   "ro" : "2. persoana în cauza nu a fost citata personal si nici informata prin alte mijloace cu privire la data si locul sedintei în care s-a dat hotarârea în lipsa, însa dispune de urmatoarele garantii juridice dupa predarea catre autoritatile judiciare (daca astfel de garantii pot fi date anticipat):  "
+   },
+"info_tick":
+   {
+   "en" : "You have ticked the box under point 2, please confirm the existence of one of the following:",
+   "nl" : "Indien u het vakje 'neen' (keuzemogelijkheid 2) heeft aangekruist, gelieve een van de volgende gevallen te bevestigen:"
+   },
+"summoned_on":
+   {
+   "en" : "specifiy date"
+   },
+"3-1-a":
+   {
+   "en" : "3.1a. the person was summoned in person on ___summoned_on___ (day/month/year) and thereby informed of the scheduled date and place of the trial which resulted in the decision and was informed that a decision may be handed down if he or she does not appear for the trial;",
+   "nl" : "3.1a) de betrokkene is persoonlijk gedagvaard op ___summoned_on___ (dag/maand/jaar) en is daarbij op de hoogte gebracht van het tijdstip en de plaats van het proces dat tot de beslissing heeft geleid, en is ervan in kennis gesteld dat een beslissing kan worden gegeven wanneer hij niet op het proces verschijnt; "
+   },
+"3-1-b":
+   {
+   "en" : "3.1b. the person was not summoned in person but by other means actually received official information of the scheduled date and place of the trial which resulted in the decision, in such a manner that it was unequivocally established that he or she was aware of the scheduled trial, and was informed that a decision may be handed down if he or she does not appear for the trial<br><br>OR<br><br>",
+   "nl" : "3.1b) de betrokkene is niet persoonlijk gedagvaard, maar is anderszins daadwerkelijk officieel in kennis gesteld van het tijdstip en de plaats van het proces dat tot de beslissing heeft geleid zodat op ondubbelzinnige wijze vaststaat dat de betrokkene op de hoogte was van het voorgenomen proces, en is ervan in kennis gesteld dat een beslissing kan worden gegeven wanneer hij niet op het proces verschijnt;<br><br>OF<br><br>"
+   },
+"relevant_condition":
+   {
+   "en" : "<br><br>4. If you have ticked the box under point 3.1b, 3.2 or 3.3 above, please provide information about how the relevant condition has been met:",
+   "nl" : "<br><br>4. Gelieve voor het in punt 3.1b), 3.2 of 3.3 aangekruiste vakje te vermelden op welke wijze aan de desbetreffende voorwaarde is voldaan:"
+   },
+"3-2":
+   {
+   "en" : "3.2. being aware of the scheduled trial, the person had given a mandate to a legal counsellor, who was either appointed by the person concerned or by the State, to defend him or her at the trial, and was indeed defended by that counsellor at the trial;",
+   "nl" : "3.2. de betrokkene was op de hoogte van het voorgenomen proces, heeft een zelf gekozen of van overheidswege toegewezen raadsman gemachtigd zijn verdediging op het proces te voeren, en is op het proces ook werkelijk door die raadsman verdedigd;"
+   },
+"3-3":
+   {
+   "en" : "3.3. the person was served with the decision on ___date_3_3___ (day/month/year) and was expressly informed about the right to a retrial or appeal, in which he or she has the right to participate and which allows the merits of the case, including fresh evidence, to be re-examined, and which may lead to the original decision being reversed, and ",
+   "nl" : "3.3. de beslissing is op ___date_3_3___ (dag/maand/jaar) aan de betrokkene betekend, en hij is uitdrukkelijk geïnformeerd over zijn recht op een verzetprocedure of een procedure in hoger beroep, waarbij hij het recht heeft aanwezig te zijn, waarbij de zaak opnieuw ten gronde wordt behandeld en nieuw bewijsmateriaal wordt toegelaten, en die kan leiden tot herziening van de oorspronkelijke beslissing"
+   },
+"3-3-a":
+   {
+   "en" : "the person expressly stated that he or she does not contest this decision;",
+   "nl" : "de betrokkene heeft uitdrukkelijk te kennen gegeven dat hij de beslissing niet betwist;"
+   },
+"3-3-b":
+   {
+   "en" : "the person did not request a retrial or appeal within the applicable timeframe;",
+   "nl" : "de betrokkene heeft niet binnen de voorgeschreven termijn verzet of hoger beroep aangetekend;"
+   },
+"3-4":
+   {
+   "en" : "3.4. the person was not personally served with the decision, but <br><br>- the person will be personally served with this decision without delay after the surrender; and <br><br>- when served with the decision, the person will be expressly informed of his or her right to a retrial or appeal, in which he or she has the right to participate and which allows the merits of the case, including fresh evidence, to be re-examined, and which may lead to the original decision being reversed; and <br><br>- the person will be informed of the timeframe within which he or she has to request a retrial or appeal, which will be ___number_days___ days.",
+   "nl" : "3.4. de beslissing is niet persoonlijk aan de betrokkene betekend, maar<br><br>- de beslissing zal hem na de overlevering onverwijld persoonlijk worden betekend; en<br><br>- de betrokkene zal na de betekening van de beslissing uitdrukkelijk worden geïnformeerd over zijn recht op een verzetprocedure of een procedure in hoger beroep, waarbij hij het recht heeft aanwezig te zijn, waarbij de zaak opnieuw ten gronde wordt behandeld en nieuw bewijsmateriaal wordt toegelaten, en die kan leiden tot herziening van de oorspronkelijke beslissing; en<br><br>– de betrokkene zal geïnformeerd worden over de termijn waarover hij beschikt om verzet of hoger beroep aan te tekenen, namelijk ___number_days___ dagen."
+   },
+"number_days":
+   {
+   "en" : "Please specify timeframe #days:",
+   "nl" : "Gelieve het aantal dagen te specificeren #dagen:"
+   },
+"tab_e":
+   {
+   "en" : "e) Offences:",
+   "nl" : "e) Strafbare feiten:",
+   "ro" : "e) Infractiunea (infractiunile) "
+   },
+"number_offences":
+   {
+   "en" : "This warrent relates to a total number of offences of:",
+   "nl" : "Dit bevel heeft betrekking op in totaal ___number_offences___ strafbare feiten",
+   "ro" : "Prezentul mandat se refera la un total de ___number_offences___ infractiuni "
+   },
+"circumstances":
+   {
+   "en" : "Description of the circumstances in which the offence(s) was (were) committed, including the time, place and degree of participation in the offence(s) by the requested person:",
+   "nl" : "Beschrijving van de omstandigheden waaronder het strafbare feit is gepleegd/de strafbare feiten zijn gepleegd, met inbegrip van het tijdstip, de plaats en de mate van betrokkenheid van de gezochte persoon bij het strafbare feit/de strafbare feiten",
+   "ro" : "Descrierea circumstantelor în care s-a/s-au comis infractiunea/infractiunile, inclusiv momentul (data si ora), locul si gradul de participare la aceasta/acestea a persoanei solicitate:"
+   },
+"legal_classification":
+   {
+   "en" : "Nature and legal classification of the offence(s) and the applicable statutory provision/code:",
+   "nl" : "Aard en wettelijke kwalificatie van het strafbare feit/de strafbare feiten en toepasselijke wettelijke bepaling/wetboek:",
+   "ro" : "Natura si încadrarea juridica a faptelor si dispozitiile legale aplicabile/codul aplicabil:"
+   },
+"punishable_offences":
+   {
+   "en" : "<br><b>I.</b> If applicable, tick one or more of the following offences punishable in the issuing Member State by a custodial sentence or detention order of a maximum of at least 3 years as defined by the laws of the issuing Member State:",
+   "nl" : "<br><b>I.</b> Geef in voorkomend geval aan of het gaat om één of meer van de volgende strafbare feiten waarop in de uitvaardigende lidstaat een vrijheidsstraf of een tot vrijheidsbeneming strekkende maatregel staat met een maximum van ten minste 3 jaar en zoals omschreven in het recht van de uitvaardigende lidstaat (vakje aankruisen):",
+   "ro" : "<br><b>I.</b> Daca este cazul, sa se marcheze una sau mai multe dintre urmatoarele fapte, sanctionate în statul membru emitent cu o pedeapsa privativa de libertate sau cu un ordin de detentie cu o durata maxima de cel putin 3 ani, asa cum sunt definite în legislatia statului membru emitent:"
+   },
+"uncovered_offences":
+   {
+   "en" : "<br><b>II.</b> Full descriptions of offence(s) not covered by section I above:",
+   "nl" : "<br><b>II. </b> Volledige omschrijving van het strafbare feit of de strafbare feiten die niet onder de in punt I genoemde strafbare feiten vallen:",
+   "ro" : "<br><b>II. </b> Descrierea detaliata a faptei sau faptelor care nu se încadreaza la sectiunea I:"
+   },
+"tab_f":
+   {
+   "en" : "f) Other circumstances relevant to the case (optional information):",
+   "nl" : "f) Andere voor de zaak relevante omstandigheden (facultatieve informatie):",
+   "ro" : "f) Alte circumstante relevante (informatii facultative):"
+   },
+"other_circumstances":
+   {
+   "en" : "(NB: This could cover remarks on extraterritoriality, interruption of periods of time limitation and other consequences of the offence)",
+   "nl" : "(Noot: bijvoorbeeld opmerkingen over extra-territorialiteit, stuiting van de verjaring en andere gevolgen van het strafbare feit)",
+   "ro" : "(Pot fi incluse observatii cu privire la extrateritorialitate, întreruperea termenelor de prescriptie sau la consecintele infractiunii.)"
+   },
+"tab_g":
+   {
+   "en" : "g) This warrant pertains also to the seizure and handing over of property which may be required as evidence:",
+   "nl" : "g) Dit bevel heeft tevens betrekking op de inbeslagneming en de overdracht van voorwerpen die als bewijsmiddel moeten dienen",
+   "ro" : "g)  Prezentul mandat se refera, de asemenea, la confiscarea si remiterea obiectelor care pot constitui mijloace materiale de proba."
+   },
+"g_info":
+   {
+   "en" : "This warrant pertains also to the seizure and handing over of property acquired by the  requested person as a result of the offence:",
+   "nl" : "Dit bevel heeft tevens betrekking op de inbeslagneming en de overdracht van voorwerpen die de gezochte persoon uit het strafbare feit heeft verkregen:",
+   "ro" : "Prezentul mandat se refera de asemenea la confiscarea si remiterea obiectelor obtinute de persoana solicitata ca rezultat al infractiunii:"
+   },
+"description_property":
+   {
+   "en" : "Description of the property (and location) (if known):",
+   "nl" : "Beschrijving en plaats van de voorwerpen (indien bekend):",
+   "ro" : "Descrierea (si localizarea) obiectelor (în cazul în care sunt cunoscute):"
+   },
+"tab_h":
+   {
+   "en" : "h) The offence(s) on the basis of which this warrant has been issued is(are) punishable by/has(have) led to a custodial life sentence or lifetime detention order:",
+   "nl" : "h) Het strafbare feit/de strafbare feiten dat/die aan dit bevel ten grondslag ligt/liggen, is(zijn) strafbaar gesteld met/heeft(hebben) geleid tot een vrijheidsstraf of tot vrijheidsbeneming strekkende maatregel welke levenslange vrijheidsbeneming meebrengt:",
+   "ro" : "h) Infractiunea sau infractiunile pentru care s-a emis prezentul mandat sunt sanctionate cu pedeapsa detentiunii pe viata sau cu un ordin de detentie pe viata:  "
+   },
+"option_a":
+   {
+   "en" : "the legal system of the issuing Member State allows for a review of the penalty or measure imposed - on request or at least after 20 years – aiming at a non-execution of such penalty or measure,<br><br>and/or<br><br>",
+   "nl" : "de rechtsorde van de uitvaardigende lidstaat voorziet in de herziening van de opgelegde straf - op verzoek of ten minste na 20 jaar –strekkende tot niet-uitvoering van de straf;<br><br>en/of<br><br>",
+   "ro" : "dispozitiile legale ale statului membru emitent prevad revizuirea pedepsei aplicate sau liberarea conditionata, dupa executarea a 20 de ani din pedeapsa aplicata, în vederea neexecutarii pedepsei sau a masurii;<br><br>si/sau<br><br>"
+   },
+"option_b":
+   {
+   "en" : "the legal system of the issuing Member State allows for the application of measures of clemency to which the person is entitled under the law or practice of the issuing Member State, aiming at non execution of such penalty or measure.",
+   "nl" : "de rechtsorde van de uitvaardigende lidstaat voorziet in de toepassing van gratiemaatregelen waarvoor de betrokkene krachtens de wetgeving of praktijk van de uitvaardigende lidstaat in aanmerking komt, en die strekken tot niet-uitvoering van de straf.",
+   "ro" : "dispozitiile legale ale statului membru emitent prevad aplicarea masurilor de clementa la care are drept persoana în cauza, în conformitate cu dreptul sau practica statului membru emitent, în vederea neexecutarii pedepsei sau a masurii"
+   },
+"tab_i":
+   {
+   "en" : "i) The judicial authority which issued the warrant:",
+   "nl" : "i) Rechterlijke autoriteit die het bevel heeft uitgevaardigd:",
+   "ro" : "i) Autoritatea judiciara emitenta a prezentului mandat:"
+   },
+"issued_name":
+   {
+   "en" : "Official name",
+   "nl" : "Officiële naam:"
+   },
+"issued_rep":
+   {
+   "en" : "Name of its representative",
+   "nl" : "Naam van haar vertegenwoordiger"
+   },
+"issued_post":
+   {
+   "en" : "Post held (title/grade)",
+   "nl" : "Functie (titel/rang):"
+   },
+"issued_reference":
+   {
+   "en" : "File reference",
+   "nl" : "Dossiernummer:"
+   },
+"address":
+   {
+   "en" : "Address",
+   "nl" : "Adres"
+   },
+"phone":
+   {
+   "en" : "Tel. No.: (country code) (area/city code) (...) ",
+   "nl" : "Tel. (landnummer) (netnummer)"
+   },
+"fax":
+   {
+   "en" : "Fax No. (country code) (area/city code) ( )",
+   "nl" : "Fax (landnummer) (netnummer):"
+   },
+"email":
+   {
+   "en" : "E-mail",
+   "nl" : "E-mailadres"
+   },
+"issued_contact":
+   {
+   "en" : "Contact details of the person to contact to make necessary practical arrangements for the surrender",
+   "nl" : "Adresgegevens van de persoon die moet worden gecontacteerd om de nodige praktische afspraken te maken voor de overlevering"
+   },
+"tab_j":
+   {
+   "en" : "j) Where a central authority has been made responsible for the transmission and administrative reception of European arrest warrants: ",
+   "nl" : "j) Indien een centrale autoriteit is belast met de administratieve toezending en ontvangst van Europese aanhoudingsbevelen:",
+   "ro" : "j) În cazul în care se desemneaza o autoritate centrala pentru transmiterea si receptarea mandatelor europene de arestare"
+   },
+"central_authority_name":
+   {
+   "en" : "Name of the central authority",
+   "nl" : "Naam van de centrale autoriteit:"
+   },
+"central_authority_contact":
+   {
+   "en" : "Contact person, if applicable (title/grade and name)",
+   "nl" : "Contactpersoon, in voorkomend geval (titel/rang en naam):"
+   },
+"tab_signature":
+   {
+   "en" : "Signature",
+   "nl" : "Handtekening",
+   "ro" : "Semnatura"
+   },
+"signature_details":
+   {
+   "en" : "Signature of the issuing judicial authority and/or its representative:",
+   "nl" : "Handtekening van de verzoekende rechterlijke autoriteit en/of haar vertegenwoordiger:",
+   "ro" : "Semnatura autoritatii judiciare emitente, a reprezentantului sau a amândurora:"
+   },
+"date":
+   {
+   "en" : "Date",
+   "nl" : "Datum",
+   "ro" : "Data"
+   },
+"stamp":
+   {
+   "en" : "Official stamp (if available)",
+   "nl" : "Officieel stempel (indien beschikbaar)",
+   "ro" : "Stampila oficiala (daca exista)"
+   },
+"tab_annexes":
+   {
+   "en" : "Annexes",
+   "nl" : "Bijlagen"
+   },
+"annexes":
+   {
+   "en" : "List all annexed documents:",
+   "nl" : "Lijst van alle bijlagen"
+   },
+"annex":
+   {
+   "en" : "Annex",
+   "nl" : "Bijlage",
+   "ro" : "Anexă"
+   },
+"add_annex":
+   {
+   "en" : "Add annex",
+   "nl" : "Voeg bijlage toe"
+   }
+
+}

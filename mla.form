@@ -1,0 +1,57 @@
+{
+  "language":"english",
+  "version":"0.0.1",
+  "instrument":"MLA",
+  "author":"Remco",
+  "route":
+  	[
+	{ "type":"tab","label":"Requesting authority"},
+	{ "type":"multiple","label":"Persons involved","name":"mlt_persons","button":"Add person", "route":
+	  [
+		{ "type":"text","label":"Family name","name":"family_name"},
+		{ "type":"text","label":"First name(s)", "name":"first_name"},
+		{ "type":"country","label":"Country", "name":"mprequestiong_country"},
+		{ "type":"choose","style":"checkbox","label":"Offences:","name":"punishable_offences", "break":1,"options":[
+			{"value":"1","label":"participation in a criminal organisation"}, 
+			{"value":"2","label":"terrorism"}, 
+			{"value":"3","label":"trafficking in human beings"},
+			{"value":"4","label":"sexual exploitation of children and child pornography"},
+			{"value":"5","label":"illicit trafficking in narcotic drugs and psychotropic substances"},
+			{"value":"6","label":"illicit trafficking in weapons, munitions and explosives"}]}
+	  ]},
+	{ "type":"text", "label":"Reference of requesting authority", "required":1, "name":"ref_authority"},
+	{ "type":"choose","style":"radio","break":1,"label":"Does the requesting authority wish to be present during the execution of the measure?","name":"be_present", "options":[ { "value":"yes"},{"value":"no"} ] },
+	{ "type":"country","label":"Country", "name":"requestiong_country", "required":1},
+	{ "type":"text","label":"Authority","name":"requesting_authority","required":1},
+	{ "type":"text","label":"Type","name":"requesting_type"},
+	{ "type":"text","label":"Description", "name":"requesting_description","break":1,"rows":6},
+	{ "type":"text","label":"Last name, first name","name":"requesting_last_first"},
+	{ "type":"text","label":"Address","required":1,"name":"requesting_address","break":1, "rows":3},
+	{ "type":"text","label":"Postcode","name":"requesting_postcode"},
+	{ "type":"text","label":"City","name":"requesting_city"},
+	{ "type":"text","label":"Telephone number", "name":"requesting_phone"},
+	{ "type":"text","label":"Fax number", "name":"requesting_fax"},
+	{ "type":"text","label":"E-mail", "name":"requesting_email"},
+	{ "type":"text","label":"Spoken languages", "name":"spoken_languages","break":1,"rows":5},
+
+	{ "type":"tab", "label":"Requested authority"},
+	{ "type":"country","label":"Requested country","required":1, "name":"requested_country"},
+	{ "type":"text","label":"Authority","name":"requested_authority","required":1},
+	{ "type":"text","label":"Type","name":"requested_type"},
+	{ "type":"text","label":"Description", "name":"requested_description","break":1,"rows":6},
+	{ "type":"text","label":"Last name, first name","name":"requested_last_first"},
+	{ "type":"text","label":"Address","required":1,"name":"requested_address","break":1, "rows":3},
+	{ "type":"text","label":"Postcode","name":"requested_postcode"},
+	{ "type":"text","label":"City","name":"requested_city"},
+	{ "type":"text","label":"Telephone number", "name":"requested_phone"},
+	{ "type":"text","label":"Fax number", "name":"requested_fax"},
+	{ "type":"text","label":"E-mail", "name":"requested_email"},
+	{ "type":"text","label":"Comment", "name":"comment","break":1,"rows":5},
+
+	{ "type":"tab","label":"Load existing form", "skip":"pdf"},
+	{ "type":"info","label":"Load previously saved form or start new session.", "skip":"pdf"},
+	{ "type":"load", "skip":"pdf"},
+	{ "type":"save", "skip":"pdf"}
+
+	]
+} 

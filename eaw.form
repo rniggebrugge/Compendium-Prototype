@@ -1,0 +1,190 @@
+{
+  "language":"english",
+  "version":"0.0.2",
+  "instrument":"EAW",
+  "author":"Remco",
+  "route":
+  	[
+
+	  { "type":"tab", "lookup":"tab_a"},
+	  { "type":"text", "name":"name"},
+	  { "type":"text", "name":"forenames"},
+	  { "type":"text", "name":"maiden_name"},
+	  { "type":"text", "name":"alias"},
+	  { "type":"choose", "name":"sex", "style":"select","options":
+	  		[
+				{"value":"male"},
+				{"value":"female"},
+				{"value":"unknown"}
+			]},
+	  { "type":"date",  "name":"birthday"},
+	  { "type":"text",  "name":"birthplace"},
+	  { "type":"text",  "rows":4, "name":"residence", "break":1},
+	  { "type":"text", "translations":1,"name":"languages", "break":1,
+		"rows":2},
+	  { "type":"text", "translations":1,"name":"marks", "break":1, "rows":2},
+	  { "type":"spacer","lookup":"photo","break":1,"rows":8},
+	  { "type":"tabend"},
+
+	  { "type":"tab","lookup":"tab_b"},
+	  { "type":"text",	"name":"warrant_decision", "break":1, "rows":2, "translations":1},
+	  { "type":"text","name":"warrant_type", "translations":1},
+	  { "type":"text","name":"judgement","break":1, "rows":2, "translations":1},
+	  { "type":"text","name":"reference"},
+	  { "type":"tabend"},
+
+	  { "type":"tab","lookup":"tab_c"},
+	  { "type":"text", "name":"max_length", "rows":3,"break":1, "translations":1},
+	  { "type":"text", "break":1, "rows":3,"name":"length_custodial", "translations":1},
+	  { "type":"text", "name":"remaining", 	"rows":3, "break":1, "translations":1},
+	  { "type":"tabend"},
+
+	  { "type":"tab", "lookup":"tab_d"},
+	  { "type":"choose","style":"radio", "label":"","name":"appeared_at_trial", "options": [
+	  		{"value":"yes", "lookup":"yes_appeared"},
+			{"value":"no", "lookup":"no_appeared", "route":
+			[
+				{ "type":"info", "lookup":"info_tick", "skip":"pdf"},
+				{
+				  "type":"choose", "style":"radio", "name":"summoned_details",
+				  "options": [
+				  		{ "value":"3-1-a",
+						  "route_visible":1,"route_position":"inline","route": [
+						  		{ "type":"date", "name":"summoned_on", "skip":"pdf"}
+								]
+						  },
+						{ "value":"3-1-b",
+						  "route_visible":1, "route": [
+							 {
+							   "type":"text", "name":"relevant_condition", "rows":3, "break":1, "translations":1
+							   }
+						  ]},
+				  		{ "value":"3-2", "copy_route":"3-1-b" },
+				  		{ "value":"3-3", "copy_route":"3-1-b",
+						  "route_position":"inline", "route_visible":1,
+						  "route": [
+						  	{ "type":"date", "label":"specifiy date", "name":"date_3_3", "skip":"pdf"},
+							{ "type":"choose", "style":"radio",
+								"label":"", "name":"3_3_details", "options":
+								[
+									{ "value":"3-3-a"},
+									{ "value":"3-3-b"}
+								]
+								}
+						  ]
+						  },
+				  		{ "value":"3-4","route_position":"inline", "route_visible":1, "route": [
+						  		{"type":"text", "name":"number_days", "skip":"pdf"}
+						  ]}
+				  	]
+				}
+			]
+			}
+			]},
+	  { "type":"tabend"},
+
+	 { "type":"tab","lookup":"tab_e"},
+	 { "type":"number", "name":"number_offences", "break":1},
+	 { "type":"text", "rows":10,"break":1, "name":"circumstances" , "translations":1},
+	 { "type":"text", "rows":10, "break":1, "name":"legal_classification", "translations":1 },
+	 { "type":"choose","style":"checkbox","name":"punishable_offences",
+	 	"break":2,"options":[
+			{"value":"1","label":"participation in a criminal organisation"}, 
+			{"value":"2","label":"terrorism"}, 
+			{"value":"3","label":"trafficking in human beings"},
+			{"value":"4","label":"sexual exploitation of children and child pornography"},
+			{"value":"5","label":"illicit trafficking in narcotic drugs and psychotropic substances"},
+			{"value":"6","label":"illicit trafficking in weapons, munitions and explosives"},
+			{"value":"7","label":"corruption"},
+			{"value":"8","label":"fraud, including that affecting the financial interests of the European Communities within the meaning of the Convention of 26 July 1995 on the protection of European Communities' financial interests"},
+			{"value":"9","label":"laundering of the proceeds of crime"},
+			{"value":"10","label":"counterfeiting of currency, including the euro"},
+			{"value":"11","label":"computer-related crime"},
+			{"value":"12","label":"environmental crime, including illicit trafficking in endangered animal species and in endangered plant species and varieties"},
+			{"value":"13","label":"facilitation of unauthorised entry and residence"},
+			{"value":"14","label":"murder, grievous bodily injury"},
+			{"value":"15","label":"illicit trade in human organs and tissue"},
+			{"value":"16","label":"kidnapping, illegal restraint and hostage-taking"},
+			{"value":"17","label":"racism and xenophobia"},
+			{"value":"18","label":"organised or armed robbery"},
+			{"value":"19","label":"illicit trafficking in cultural goods, including antiques and works of art"},
+			{"value":"20","label":"swindling"},
+			{"value":"21","label":"racketeering and extortion"},
+			{"value":"22","label":"counterfeiting and piracy of products"},
+			{"value":"23","label":"forgery of administrative documents and trafficking therein"},
+			{"value":"24","label":"forgery of means of payment"},
+			{"value":"25","label":"illicit trafficking in hormonal substances and other growth promoters"},
+			{"value":"26","label":"illicit trafficking in nuclear or radioactive materials"},
+			{"value":"27","label":"trafficking in stolen vehicles"},
+			{"value":"28","label":"rape"},
+			{"value":"29","label":"arson"},
+			{"value":"30","label":"crimes within the jurisdiction of the International Criminal Court"},
+			{"value":"31","label":"unlawful seizure of aircraft/ships"},
+			{"value":"32","label":"sabotage."}
+		] },
+		{ "type":"text","name":"uncovered_offences", "break":1, "rows":25, "translations":1},
+	  { "type":"tabend"},
+			
+			{ "type":"tab","lookup":"tab_f"},
+			{  "type":"text", "break":1, "rows":25, "name":"other_circumstances", "translations":1},
+	  { "type":"tabend"},
+				
+			{ "type":"tab", "lookup":"tab_g"},
+			{ "type":"info", "lookup":"g_info"},
+			{ "type":"text", "name":"description_property", "break":1, "rows":10},
+	  { "type":"tabend"},
+
+			{ "type":"tab", "lookup":"tab_h" },
+			{ "type":"choose", "style":"checkbox", "name":"warrant_basis", "label":"", "options":[
+				{"value":"option_a" },
+				{"value":"option_b" }
+				]
+			},
+	  { "type":"tabend"},
+			
+	{ "type":"tab", "lookup":"tab_i"},
+	{ "type":"text", "name":"issued_name" },
+	{ "type":"text", "name":"issued_rep"},
+	{ "type":"text", "name":"issued_post", "translations":1},
+	{ "type":"text", "name":"issued_reference"},
+	{ "type":"text", "name":"issued_address", "lookup":"address", "break":1, "rows":5},
+	{ "type":"text", "name":"issued_phone", "lookup":"phone"},
+	{ "type":"text", "name":"issued_fax", "lookup":"fax"},
+	{ "type":"text", "name":"issued_email", "lookup":"email"},
+	{ "type":"text", "name":"issued_contact", "break":1, "rows":5 },
+	{ "type":"tabend"},
+		
+	{ "type":"tab","lookup":"tab_j" },
+			{ "type":"text", "name":"central_authority_name"},
+			{ "type":"text", "name":"central_authority_contact", "break":1, "rows":5, "translations":1},
+			{ "type":"text", "lookup":"address", "name":"central_authority_address", "break":1, "rows":5},
+			{ "type":"text", "name":"central_authority_phone", "lookup":"phone"},
+			{ "type":"text", "name":"central_authority_fax", "lookup":"fax"},
+			{ "type":"text", "name":"central_authority_email", "lookup":"email"},
+	  { "type":"tabend"},
+			
+{ "type":"pagebreak"},			
+	{ "type":"tab", "lookup":"tab_signature"},
+	{ "type":"spacer", "lookup":"signature_details","break":1, "rows":8},
+	{ "type":"text", "lookup":"name","name":"name_signature"},
+	{ "type":"text", "lookup":"issued_post","name":"post_signature", "translations":1},
+	{ "type":"date", "lookup":"date", "name":"date_signature"},
+	{ "type":"spacer", "lookup":"stamp", "break":1, "rows":8},
+	{ "type":"tabend"},
+			
+	{ "type":"tab", "lookup":"tab_annexes"},
+	{ "type":"multiple","name":"annexes","button":"add_annex",
+		"route":[ { "type":"text", "name":"annex", "translations":1} ]
+			},
+	{ "type":"tabend"}
+
+	],
+	
+	"coverpage":[
+		{"text":"cover-annex","style":"bold","x":160,"y":25},
+		{"text":"cover-eaw","style":"bold","x":70,"y":50},
+		{"x":10,"y":260,"text":"1"},
+		{"dy":5,"x":15,"y":260,"text":"cover-note" },
+		{"dy":8,"x":10, "y":70,"text":"cover-main"}
+	]
+}

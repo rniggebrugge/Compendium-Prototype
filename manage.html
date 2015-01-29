@@ -1,0 +1,229 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Managing translations - 0.0.1</title>
+<style>
+* { font-family:Arial}
+body { margin:10px 20px; background:#999}
+#helper { position:fixed; background:#006; right:0; top:0; height:36px; border-radius:0 0 0 10px; text-align:right}
+#helper button { font-weight:bold; font-size:18px; padding:0 2px; margin-left:10px }
+#helper select, #helper input { margin-left:20px;}
+#file_content { height:600px;width:100%; margin:0 0; font-size:10px; color:#009; background:#eee; }
+#languages , #disable_form { margin:5px 0; padding:5px 5px 9px; background:#ddf}
+#editor table { border-collapse:collapse; width:100%; background:#ddf; margin:8px 0 10px }
+#editor table td { vertical-align:top; border:1px solid #666; padding:3px 0; font-size:13px; font-weight:bold}
+#editor table td div { padding:0 0 4px 4px; margin:4px 0 4px 0; border-bottom:1px solid #fff}
+#editor table td span { display:block; float:left; width:30px; margin:2px 4px 0 0; background:#f90; text-transform:uppercase;
+	border-radius:4px; text-align:center; color:#fff; font-size:11px; font-weight:normal; padding:2px 2px; font-weight:bold}
+#editor table td textarea { font-size:11px; width:90%; margin:0px}
+button { background:#09f; border:0; color:#fff; font-weight:bold; font-size:11px; border-radius:4px;
+	padding:3px 6px; margin:4px 4px 0 0; cursor:pointer}
+.highlight { background:#ff0; }
+.inactive { background:#666 !important; color:#fff !important;  }
+</style>
+<script src="http://code.jquery.com/jquery-1.9.1.js" type="text/javascript" language="javascript"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js" type="text/javascript" language="javascript"></script>
+<script>
+$(function(){
+	var available_forms = [ 	
+				{i:"eaw",t:"European Arrest Warrant (EAW)"}  ,
+				{i:"mla",t:"Rogatory Letter (MLA)"},
+				{i:"confiscation-order",t:"Confiscation Order"}],
+		language = [ "bg","de","dk","en","fr","fi","nl","pl","pt","ro" ],
+		file_content,json;
+
+	function init(){
+		var i, opt, sel=$("#file_select"), dis = $("#disable_form"), btn, helper;
+		for (i in available_forms){
+			opt=$("<option value='"+available_forms[i].i+"'>"+available_forms[i].t+"</option>");
+			sel.append(opt);
+		}
+		$("#btnFile").click(load_file);
+		sel = $("#languages");
+		for (i in language){
+			opt=$("<button type='button' value="+language[i]+" >"+language[i]+"</button>");
+			btn = opt.clone();
+			opt.click(toggle_language);
+			btn.click(toggle_disable);
+			sel.append(opt);
+			dis.append(btn);
+		}
+		opt=$("<button type='button' style='margin-left:10px'>Show all</button>");
+		opt.click(showAll);
+		sel.append(opt);
+		opt=$("<button type='button' style='margin-left:10px'>Enable all</button>");
+		opt.click(enableAll);
+		dis.append(opt);
+	}
+
+	function load_file(){
+		var file = $("#file_select").val()+".label";		
+		$.get(file+"?nocache="+(new Date()).getTime(), function(data){
+			file_content = data;
+			json=$.parseJSON(data);
+			show_file();
+			show_form();
+		});
+		return false;
+	}
+	
+	function show_file(){
+		var i, x, txt = "", sep = "{", sep2;
+		for (i in json){
+			txt+=sep+"\n\""+i+"\":\n   {";
+			sep2 = "";
+			for(x in language) if(json[i][language[x]]){
+				txt+=sep2+"\n   \""+language[x]+"\" : \""+json[i][language[x]].replace(/"/g,"'").replace(/\n/g," ")+"\"";
+				sep2=",";
+			}
+			txt+="\n   }";	
+			sep =",";	
+		}
+		txt+="\n\n}"
+		$("#file_content").val(txt);			
+	} 
+	
+	function show_form(){
+		var form = $("#editor"), table, tr, td, label, field, i, x, lang, div;
+		form.html("");
+		table=$("<table>");
+		for (i in json){
+			tr=$("<tr>");
+			td = $("<td>&nbsp;"+i+"</td>");
+			tr.append(td);
+			td = $("<td></td>");
+			for(x in language){
+				lang = language[x];
+				label=$("<span>"+lang+"</span>");
+				field=$("<textarea rows=1 cols=80 ref='"+i+"' language='"+lang+"'>"+(json[i][lang]||"")+"</textarea>");
+				field.unbind("change").change(update_json);
+				div=$("<div language="+lang+"></div>");
+				div.append(label, field);
+				td.append(div);	
+			}
+			tr.append(td);
+			table.append(tr);
+		}
+		form.append(table);			
+		create_helper();
+	}
+
+	function create_helper(filter){
+		if(!filter)filter="";
+		var helper, sel, btn, bottom = $(document).height()-$(window).height();
+		helper=$("#helper");
+		helper.html("");
+		sel=$("<input type=text id='filter' size=12 value='"+filter+"'>");
+		helper.append(sel);
+		btn=$("<button type='button' style='margin-left:4px'>filter</button>");
+		btn.click(filter_entries);
+		helper.append(btn);
+		sel=$("<select><option value=0>to top</option></option></select>");
+		$("tr:visible td:first-child").each(function(){
+			var pos = Math.round($(this).offset().top), val = $(this).html();
+			var opt = $("<option value='"+pos+"'>"+val+"</option>");
+			sel.append(opt);
+		});
+		sel.append("<option value='"+bottom+"'>to bottom</option>");
+		sel.change(function(){
+			var pos = $(this).val();
+			$('html, body').animate({ scrollTop:pos}, 900, "easeOutQuint");
+		});
+		helper.append(sel);
+		btn=$("<button type='button'>&uarr;</button>");
+		btn.click(function(){
+			$('html, body').animate({ scrollTop:0}, 900, "easeOutQuint");
+		});
+		helper.append(btn);
+		btn=$("<button type='button'>&darr;</button>");
+		btn.click(function(){
+			$('html, body').animate({ scrollTop: bottom}, 900, "easeOutQuint");
+		});
+		helper.append(btn);		
+		
+	}
+	function update_json(){
+		var lang = $(this).attr("language"), ref = $(this).attr("ref");
+		json[ref][lang]=$(this).val();
+	}
+	
+	function toggle_language(){
+		var lang = $(this).val(), allActive = true;
+		if($(this).hasClass("inactive")){
+			$(this).removeClass("inactive");
+			$("div[language='"+lang+"']").show();
+		} else {
+			$(this).addClass("inactive");
+			$("div[language='"+lang+"']").hide();
+		}
+		$("#languages button").not(":last").each(function(){ if($(this).hasClass("inactive")) allActive=false;})
+		if(allActive) $("#languages button:last").removeClass("inactive");
+		else          $("#languages button:last").addClass("inactive");
+		create_helper();
+		return false;	
+	}
+
+	function toggle_disable(){
+		var lang = $(this).val(), allEnabled = true;
+		if($(this).hasClass("inactive")){
+			$(this).removeClass("inactive");
+			$("textarea[language='"+lang+"']").prop("disabled",false);
+			$("span:contains('"+lang+"')").removeClass("inactive");
+		} else {
+			$(this).addClass("inactive");
+			$("textarea[language='"+lang+"']").prop("disabled",true);
+			$("span:contains('"+lang+"')").addClass("inactive");
+		}
+		$("#disable_form button").not(":last").each(function(){ if($(this).hasClass("inactive")) allEnabled=false;})
+		if(allEnabled) $("#disable_form button:last").removeClass("inactive");
+		else          $("#disable_form button:last").addClass("inactive");
+		return false;	
+	}
+
+	function filter_entries(){
+		var val = $("#filter").val().toLowerCase();
+		$("div").removeClass("highlight");
+		$("tr").show().each(function(){
+			var hide = true;
+			$(this).find("textarea:visible").each(function(){
+				var match = $(this).val().toLowerCase().indexOf(val)>=0;
+				if(match) { hide=false; if(val)$(this).parent().addClass("highlight"); }
+			});
+			if(hide) $(this).hide();
+		});
+		create_helper(val);
+	}
+	
+	function showAll(){
+		var show_all = $(this).hasClass("inactive");
+		$("#languages button").not(":last").each(function(){
+			if($(this).hasClass("inactive")==show_all) $(this).trigger("click");
+		});
+		return false;	
+	}
+
+	function enableAll(){
+		var enable_all = $(this).hasClass("inactive");
+		$("#disable_form button").not(":last").each(function(){
+			if($(this).hasClass("inactive")==enable_all) $(this).trigger("click");
+		});
+		return false;	
+	}
+
+$("#file_content").click(show_file);
+
+
+init();
+});
+</script>
+</head>
+<body>
+<div id="helper"></div>	
+<select id="file_select"></select>&nbsp; &nbsp;<button type="button" id="btnFile">Choose</button>
+<div id="languages"></div>
+<div id="disable_form"></div>
+<form id="editor"></form>
+<textarea id="file_content" ></textarea>
+</body>
+</html>
