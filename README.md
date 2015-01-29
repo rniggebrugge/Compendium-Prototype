@@ -49,6 +49,11 @@ great flexibility in the laying out of the form, at the expense of high complexi
 
 Most fields that are included in the **EAW.form** file have been given names that are referred to from the **EAW.label** file. For each named field it is possible to add the associated labels in the EU languages. 
 
+####Managing the labels
+
+Once the forms (.form and .label) files have been defined, the labels can be managed through a simple tool found in file **manage.html**. In this file the administrator chooses an Instrument and is presented with all the labels of that form.
+From there it is possible to add translations or edit current content. By changing the shown labels (or Show all) and disabling/enabling labels (or Enable all), it is made easy to limit the shown content and to prevent accidental copy-and-paste into wrong languages. 
+
 
 ####Files
 
