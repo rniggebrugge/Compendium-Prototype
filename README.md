@@ -3,7 +3,7 @@
 Author  : Remco Niggebrugge
 Purpose : Creating a limited but functioning prototype of a Compendium Tool
 
-####Description
+#### Description
 
 The Compendium Prototype shows how such a tool could function. By splitting instrument, form, fields and labels it allows the 
 quick generation of new forms in new languages, without having to alter the machine that renders these forms. In order to
@@ -11,7 +11,7 @@ achieve this files describing a form (its layout/structure) are separated from f
 Thus structure and content files are created for each instrument (=form), these follow the JSON format to ensure a smooth
 communication between the rendering machine data.
 
-####Storage
+#### Storage
 
 Temporary or draft versions, and also the ultimate versions of a request, are stored in "Local Storage". This is done so that
 all content added by a practitioner is easily accessible when he/she starts a new session and wants to retrieve previous work.
@@ -21,13 +21,13 @@ local storage, are acceptable, as long as no data is sent over the internet, any
 
 It is possible to export/import from and to local storage using the filesystem.
 
-####Generating request
+#### Generating request
 
 Once the practitioner is done filling in the form, the actual request can be drafted. The PDF file is created using Javascript
 functionality, in other words: the browser does not depend on an external server to generate the form. This ensures that
 the confidential information never leaves the client computer.
 
-####Adding instruments
+#### Adding instruments
 
 In order to add new instruments, two important files are needed, the **.form** and the **.label** files. The combination
 of these two files describes the form, structure and content. I will take the example of the EAW.
@@ -49,13 +49,13 @@ great flexibility in the laying out of the form, at the expense of high complexi
 
 Most fields that are included in the **EAW.form** file have been given names that are referred to from the **EAW.label** file. For each named field it is possible to add the associated labels in the EU languages. 
 
-####Managing the labels
+#### Managing the labels
 
 Once the forms (.form and .label) files have been defined, the labels can be managed through a simple tool found in file **manage.html**. In this file the administrator chooses an Instrument and is presented with all the labels of that form.
 From there it is possible to add translations or edit current content. By changing the shown labels (or Show all) and disabling/enabling labels (or Enable all), it is made easy to limit the shown content and to prevent accidental copy-and-paste into wrong languages. 
 
 
-####Files
+#### Files
 
 A short description of the files used in this project. Being a prototype, not everything is fully worked out.
 
